@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import mermaid from "mermaid";
+import logos from "@iconify-json/logos/icons.json";
+import mdi from "@iconify-json/mdi/icons.json";
+import aws from "@iconify-json/aws/icons.json";
 
 let idCounter = 0;
 
@@ -21,7 +24,14 @@ export default function Preview({ code, theme, onError, onSvgReady }) {
       securityLevel: "loose",
       fontFamily: "Inter, sans-serif",
     });
+
+    mermaid.registerIconPacks([
+      { name: "logos", icons: logos },
+      { name: "mdi", icons: mdi },
+      { name: "aws", icons: aws },
+    ]);
   }, [theme]);
+
 
   useEffect(() => {
     if (!containerRef.current || !code.trim()) return;
@@ -105,11 +115,10 @@ export default function Preview({ code, theme, onError, onSvgReady }) {
         <button
           onClick={() => setHandTool(!handTool)}
           title="Hand tool (drag to pan)"
-          className={`px-2 py-1 rounded border transition-colors font-medium ${
-            handTool
+          className={`px-2 py-1 rounded border transition-colors font-medium ${handTool
               ? "bg-purple-600 text-white border-purple-600"
               : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700"
-          }`}
+            }`}
         >
           ✋ Pan
         </button>
