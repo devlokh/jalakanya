@@ -10,6 +10,19 @@ const SNIPPETS = [
     code: `flowchart TD\n    A[Start] --> B{Decision}\n    B -->|Yes| C[Do it]\n    B -->|No| D[Skip]\n    C --> E[End]\n    D --> E`,
   },
   {
+    key: "architecture",
+    label: "Architecture",
+    code: `architecture-beta
+    group api(cloud)[API]
+
+    service db(database)[Database] in api
+    service server(server)[Server] in api
+    service disk(disk)[Storage] in api
+
+    db:L -- R:server
+    disk:T -- B:server`,
+  },
+  {
     key: "sequence",
     label: "Sequence",
     code: `sequenceDiagram\n    Alice->>Bob: Hello Bob!\n    Bob-->>Alice: Hi Alice!\n    Alice->>Bob: How are you?\n    Bob-->>Alice: Great, thanks!`,
