@@ -20,7 +20,6 @@ export default function App() {
   const [svgRef, setSvgRef] = useState(null);
   const [darkMode, setDarkMode] = useState(false);
 
-  // Apply/remove dark class on <html> element
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
@@ -29,9 +28,8 @@ export default function App() {
     }
   }, [darkMode]);
 
-  const handleCodeChange = useCallback((val) => {
-    setCode(val);
-  }, []);
+  const handleCodeChange = useCallback((val) => setCode(val), []);
+  const handleLoadSnippet = useCallback((snippetCode) => setCode(snippetCode), []);
 
   return (
     <div className="flex flex-col h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors">
@@ -41,6 +39,7 @@ export default function App() {
         code={code}
         darkMode={darkMode}
         setDarkMode={setDarkMode}
+        onLoadSnippet={handleLoadSnippet}
       />
       <div className="flex flex-1 overflow-hidden">
         {/* Editor pane */}
@@ -64,7 +63,7 @@ export default function App() {
             <span>Preview</span>
             <ExportPanel svgRef={svgRef} code={code} theme={theme} />
           </div>
-          <div className="flex-1 overflow-auto bg-gray-50 dark:bg-gray-950 flex items-center justify-center p-6">
+          <div className="flex-1 overflow-hidden">
             <Preview
               code={code}
               theme={theme}
