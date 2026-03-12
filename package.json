@@ -1,0 +1,30 @@
+{
+  "name": "mermaidflow",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "mermaid": "^10.9.0",
+    "@codemirror/view": "^6.26.0",
+    "@codemirror/state": "^6.4.1",
+    "@codemirror/lang-markdown": "^6.2.5",
+    "@codemirror/theme-one-dark": "^6.1.2",
+    "@uiw/react-codemirror": "^4.21.24",
+    "html-to-image": "^1.11.11",
+    "lz-string": "^1.5.0",
+    "jszip": "^3.10.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.2.0",
+    "tailwindcss": "^3.4.3",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38"
+  }
+}
