@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState, useCallback } from "react";
 import mermaid from "mermaid";
 import logos from "@iconify-json/logos/icons.json";
 import mdi from "@iconify-json/mdi/icons.json";
-import aws from "@iconify-json/aws/icons.json";
 
 let idCounter = 0;
 
@@ -27,8 +26,7 @@ export default function Preview({ code, theme, onError, onSvgReady }) {
 
     mermaid.registerIconPacks([
       { name: "logos", icons: logos },
-      { name: "mdi", icons: mdi },
-      { name: "aws", icons: aws },
+      { name: "mdi", icons: mdi }
     ]);
   }, [theme]);
 
