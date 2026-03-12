@@ -77,7 +77,7 @@ export default function App() {
 
       {/* Footer */}
       <div className="px-4 py-1.5 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 text-xs text-gray-600 dark:text-gray-400 flex justify-between">
-        <span>Jalakanya – Open Source & Free Forever</span>
+        <span>Matsyachitra – Open Source & Free Forever</span>
         <a
           href="https://github.com/devlokh/jalakanya"
           target="_blank"
