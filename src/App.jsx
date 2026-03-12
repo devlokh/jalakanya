@@ -76,13 +76,13 @@ export default function App() {
       </div>
 
       {/* Footer */}
-      <div className="px-4 py-1.5 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 text-xs text-gray-400 flex justify-between">
-        <span>MermaidFlow – Open Source & Free Forever</span>
+      <div className="px-4 py-1.5 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 text-xs text-gray-600 dark:text-gray-400 flex justify-between">
+        <span>Matsyachitra – Open Source & Free Forever</span>
         <a
-          href="https://github.com/yourusername/mermaidflow"
+          href="https://github.com/devlokh/jalakanya"
           target="_blank"
           rel="noreferrer"
-          className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+          className="text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300 font-medium transition-colors"
         >
           ⭐ Star on GitHub
         </a>
